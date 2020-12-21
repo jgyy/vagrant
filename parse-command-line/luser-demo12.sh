@@ -5,8 +5,8 @@
 # Run as root.
 if [[ "${UID}" -ne 0 ]]
 then
-    echo 'Please run with sudo or as root.' >&2
-    exit 1
+  echo 'Please run with sudo or as root.' >&2
+  exit 1
 fi
 
 # Assume the first argument is the user to delete.
@@ -18,8 +18,8 @@ userdel ${USER}
 # Make sure the user for deleted
 if [[ "${?}" -ne 0 ]]
 then
-    echo "The account ${USER} was NOT deleted." >&2
-    exit 1
+  echo "The account ${USER} was NOT deleted." >&2
+  exit 1
 fi
 
 # Tell the user account was deleted.
